@@ -1,11 +1,15 @@
 # PHP Desktop
-Run GUI applications using php on Linux systems.
+Create GUI applications for Linux systems using php.
 
 ## Installation
-- Clone repository
-```bash
-git clone https://github.com/grephq/php-desktop.git
-```
+1. Clone repository
+  ```bash
+  git clone https://github.com/grephq/php-desktop.git
+  ```
+2. Enable extension loading in ```php.ini```
+  ```ini
+  enable_dl = On
+  ```
 
 ## Usage
 https://github.com/grephq/php-desktop/wiki
