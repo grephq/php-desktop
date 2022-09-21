@@ -1,0 +1,21 @@
+{
+    "name": "grephq/php-desktop",
+    "description": "Create GUI applications on Linux using php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olorunfemi-Ojo Tomiwa",
+            "email": "ot.server1@outlook.com",
+            "homepage": "https://github.com/Tomiwa-Ot",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "ot.server1@outlook.com",
+        "wiki": "https://github.com/grephq/php-desktop/wiki"
+    },
+    "minimum-stability": "stable",
+    "require": {},
+    "version": "1.0.0"
+}
