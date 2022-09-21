@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 php-config --extension-dir > /dev/null
-if($?) {
+if [ $? -eq 0 ]
+then
 
-} else {
+else
 
-}
+fi
