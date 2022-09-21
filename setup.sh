@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-php-config --external-dir > /dev/null
+php-config --extension-dir > /dev/null
 if($?) {
 
 } else {
