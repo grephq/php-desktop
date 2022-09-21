@@ -10,6 +10,6 @@ Create GUI applications for Linux systems using php.
   ```ini
   enable_dl = On
   ```
-
+- Run ```setup.sh```
 ## Usage
 https://github.com/grephq/php-desktop/wiki
