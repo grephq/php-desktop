@@ -17,7 +17,7 @@ class Color
 	 */
 	public static function rgb($red, $green, $blue): long
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		if($red > 255) {
 			$red = $red % 255;
 		}
@@ -37,7 +37,7 @@ class Color
 	 */
 	public static function red(): long
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		return red();
 	}
 
@@ -48,7 +48,7 @@ class Color
 	 */
 	public static function green(): long
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		return green();
 	}
 
@@ -59,7 +59,7 @@ class Color
 	 */
 	public static function blue(): long
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		return blue();	
 	}
 
@@ -70,7 +70,7 @@ class Color
 	 */
 	public static function white(): long
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		return white();
 	}
 
@@ -81,7 +81,7 @@ class Color
 	 */
 	public static function black(): long
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		return black();
 	}
 }

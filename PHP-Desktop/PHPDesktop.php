@@ -29,7 +29,7 @@ class PHPDesktop
 	 */
 	public static function start($x, $y, $width, $height, $border, $borderColor = Color::black(), $background = Color::white(), $title): int
 	{
-		include(__DIR__ . '/util/Source.php');
+		include __DIR__ . '/util/Source.php';
 		start($x, $y, $width, $height, $border, $borderColor, $background, $title);
 	}
 }
