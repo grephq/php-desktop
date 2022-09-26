@@ -19,13 +19,13 @@ class Color
 	{
 		include(__DIR__ . '/util/Source.php');
 		if($red > 255) {
-			$red =  $red % 255;
+			$red = $red % 255;
 		}
 		if($green > 255) {
-			$green =  $green % 255;
+			$green = $green % 255;
 		}
 		if($blue > 255) {
-			$blue =  $blue % 255;
+			$blue = $blue % 255;
 		}
 		return rgb($red, $green, $blue);
 	}
