@@ -57,6 +57,9 @@ class Window
     /** @var string $title Window title */
     private $title;
 
+    /** @var $window Window instance */
+    private $window;
+
     /** 
      *  Parent window parameters
      * 
@@ -109,11 +112,25 @@ class Window
         $this->border = $border;
         $this->borderColor = $borderColor;
         $this->background = $background;
+        include __DIR__ . '/util/Source.php';
+        $this->window = createWindow($x, $y, $width, $height, $border, $borderColor, $background, $title);
     }
 
-    public function addText()
+    /** Return window context */
+    public function getContext()
     {
+        return $this->window;
+    }
 
+    /**
+     *  Add text to the window
+     * 
+     *  @param Text $textObject
+     */
+    public function addText($textObject): void
+    {
+        include __DIR__ . '/util/Source.php';
+        writeText($textObject->getText(), $textObject->getX(), $textObject->getY(), $textObject->getWindow(), $textObject->getBackground(), $textObject->getForeground());
     }
 
     public function addMedia()
@@ -131,13 +148,27 @@ class Window
 
     }
 
-    public function addCheckbox()
+    public function addCheckBox()
     {
 
     }
 
-    public function changeBackground()
+    public function addMessageBox()
     {
 
+    }
+
+    /** Change window background color */
+    public function changeBackground($window, $background): void
+    {
+        include __DIR__ . '/util/Source.php';
+        changeWindowBackground($window, $background);
+    }
+
+    /** Change window border color */
+    public function changeBorderColor($window, $color): void
+    {
+        include __DIR__ . '/util/Source.php';
+        changeWindowBorderColor($window, $color);
     }
 }
