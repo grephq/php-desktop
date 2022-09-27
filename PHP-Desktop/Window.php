@@ -102,7 +102,13 @@ class Window
      */
     public function __construct$x, $y, $width, $height, $border, $borderColor = Color::black(), $background = Color::white(), $title)
     {
-
+        $this->x = $x;
+        $this->$y = $y;
+        $this->$width = $width;
+        $this->$height = $height;
+        $this->$border = $border;
+        $this->$borderColor = $borderColor;
+        $this->$background = $background;
     }
 
     public function addText()
@@ -127,7 +133,7 @@ class Window
 
     public function addCheckbox()
     {
-        
+
     }
 
     public function changeBackground()
