@@ -9,27 +9,18 @@
  * 	@Wiki   : https://github.com/grephq/php-desktop/wiki
  */
 
-require_once __DIR__ . '/Color.php';
+require_once __DIR__ . '/Window.php';
 
 class PHPDesktop
 {
 	/**
 	 * 	Start GUI Application
 	 * 
-	 * 	@param int $x
-	 * 	@param int $y
-	 * 	@param int $width
-	 * 	@param int $height
-	 * 	@param int $border
-	 * 	@param long $borderColor
-	 * 	@param long $background
-	 * 	@param string $title
-	 * 
 	 * 	@return int
 	 */
-	public static function start($x, $y, $width, $height, $border, $borderColor = Color::black(), $background = Color::white(), $title): int
+	public static function start(): int
 	{
 		include __DIR__ . '/util/Source.php';
-		start($x, $y, $width, $height, $border, $borderColor, $background, $title);
+		return start(Window::$parentX, Window::$parentY, Window::$parentWidth, Window::$parentHeight, Window::$parentBorder, Window::$parentBorderColor, $background, Window::$parentTitle);
 	}
 }
