@@ -48,7 +48,7 @@ class Window
 	 * 
 	 * 	@return int
 	 */
-	public function getHeight(): void
+	public function getHeight(): int
 	{
 		return $this->height;
 	}
