@@ -1,174 +1,91 @@
 <?php
 
-/**
- *  Class for handling windows
- */
-
-require_once __DIR__ . '/Color.php';
-
 class Window
 {
 
-    /** @var int $parentX Parent window X coordinate */
-    public static $parentX;
+	private $title;
 
-    /** @var int $parentY Parent window Y coordinate */
-    public static $parentY;
+	private $width;
 
-    /** @var int $parentWidth Parent window width */
-    public static $parentWidth;
+	private $height;
 
-    /** @var int $parentHeight Parent window height */
-    public static $parentHeight;
+	public function __construct($title, $width, $height) {
+		$this->title = $title;
+		$this->width = $width;
+		$this->height = $height;
+	}
 
-    /** @var int $parentBorder Parent window border width */
-    public static $parentBorder;
+	public function getTitle() {
+		return $this->title;
+	}
 
-    /** @var long $parentBorderColor Parent window border color */
-    public static $parentBorderColor;
+	public function getWidth() {
+		return $this->width;
+	}
 
-    /** @var long $parentBackground Parent window background color */
-    public static $parentBackground;
+	public function getHeight() {
+		return $this->height;
+	}
 
-    /** @var string $parentTitle Parent window title */
-    public static $parentTitle;
+	public function setTitle($title) {
+		$this->title = $title;
+	}
 
-    /** @var int $x Window X coordinate */
-    private $x;
+	public function setWidth($width) {
+		$this->width = $width;
+	}
 
-    /** @var int $y Window Y coordinate */
-    private $y;
+	public function setHeight($height) {
+		$this->height = $height;
+	}
 
-    /** @var int $width Window width */
-    private $width;
+	public function addButton($label, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		add_button($label, $x, $y);
+	}
 
-    /** @var int $height Window height */
-    private $height;
+	public function addCheckBox($label, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		add_check_button($label, $x, $y);	
+	}
 
-    /** @var int $border Window border width */
-    private $border;
+	public function addTextField($defaultText, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		add_button($defaultText, $x, $y);
+	}
 
-    /** @var long $borderColor Window border color */
-    private $borderColor;
+	public function showMessageDialog() {
 
-    /** @var long $background Window background color */
-    private $background;
+	}
 
-    /** @var string $title Window title */
-    private $title;
+	public function addMenuBar() {
+		
+	}
 
-    /** @var $window Window instance */
-    private $window;
+	public function addRadio() {
 
-    /** 
-     *  Parent window parameters
-     * 
-     *  @param int $x
-     *  @param int $y
-     *  @param int $width
-     *  @param int $height
-     *  @param int $border
-     *  @param long $borderColor
-     *  @param long $background
-     *  @param string $title
-     */
-    public static function parentWindow($x, $y, $width, $height, $border, $borderColor = Color::black(), $background = Color::white(), $title)
-    {
-        self::$parentX = $x;
-        self::$parentY = $y;
-        self::$parentWidth = $width;
-        self::$parentHeight = $height;
-        self::$parentBorder = $border;
-        self::$parentBorderColor = $borderColor;
-        self::$parentBackground = $background;
-        self::$parentTitle = $title;
-    }
+	}
 
-    /** Return parent window  */
-    public static function getParent()
-    {
-        include __DIR__ . '/util/Source.php';
-        return getParentWindow();
-    }
+	public function addLinkButton($link, $label, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		add_link_button($link, $label, $x, $y);
+	}
 
-    /** 
-     *  Create child window
-     * 
-     *  @param int $x
-     *  @param int $y
-     *  @param int $width
-     *  @param int $height
-     *  @param int $border
-     *  @param long $borderColor
-     *  @param long $background
-     *  @param string $title
-     */
-    public function __construct$x, $y, $width, $height, $border, $borderColor = Color::black(), $background = Color::white(), $title)
-    {
-        $this->x = $x;
-        $this->y = $y;
-        $this->width = $width;
-        $this->height = $height;
-        $this->border = $border;
-        $this->borderColor = $borderColor;
-        $this->background = $background;
-        include __DIR__ . '/util/Source.php';
-        $this->window = createWindow($x, $y, $width, $height, $border, $borderColor, $background, $title);
-    }
+	public function addSwitchButton($active = false, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		if($active)
+			add_switch(1, $x, $y);
+		else
+			add_switch(0, $x, $y);
+	}
 
-    /** Return window context */
-    public function getContext()
-    {
-        return $this->window;
-    }
+	public function addText($text, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		add_label($text, $x, $y);
+	}
 
-    /**
-     *  Add text to the window
-     * 
-     *  @param Text $textObject
-     */
-    public function addText($textObject): void
-    {
-        include __DIR__ . '/util/Source.php';
-        writeText($textObject->getText(), $textObject->getX(), $textObject->getY(), $textObject->getWindow(), $textObject->getBackground(), $textObject->getForeground());
-    }
-
-    public function addMedia()
-    {
-
-    }
-
-    public function addButton()
-    {
-
-    }
-
-    public function addTextField()
-    {
-
-    }
-
-    public function addCheckBox()
-    {
-
-    }
-
-    public function addMessageBox()
-    {
-
-    }
-
-    /** Change window background color */
-    public function changeBackground($window, $background): void
-    {
-        include __DIR__ . '/util/Source.php';
-        changeWindowBackground($window, $background);
-    }
-
-    /** Change window border color */
-    public function changeBorderColor($window, $color): void
-    {
-        include __DIR__ . '/util/Source.php';
-        changeWindowBorderColor($window, $color);
-    }
+	public function addImage($image, $x, $y) {
+		include __DIR__ . '/util/Source.php';
+		add_image($image, $x, $y);
+	}
 }
