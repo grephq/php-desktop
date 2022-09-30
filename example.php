@@ -10,6 +10,6 @@ $parentWindow = new Window('Demo', 700, 700);
 // $parentWindow->addCheckBox('Checkbox', 120, 420);
 // $parentWindow->addTextField('', 450, 450);
 // $parentWindow->addLinkButton('https://github.com/Tomiwa-Ot', 'PHP-Desktop Author', 100, 150);
-// $parentWindow->addSwitchButton(True, 250, 450);
+// $parentWindow->addSwitchButton(true, 250, 450);
 
 PHPG::start($parentWindow);

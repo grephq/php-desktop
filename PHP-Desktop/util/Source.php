@@ -59,8 +59,8 @@ abstract class Source {
 		add_switch($active,$x,$y);
 	}
 
-	static function add_label($label,$x,$y) {
-		add_label($label,$x,$y);
+	static function add_label($text,$x,$y) {
+		add_label($text,$x,$y);
 	}
 
 	static function add_image($file,$x,$y) {
