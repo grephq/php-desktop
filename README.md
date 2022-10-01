@@ -1,5 +1,5 @@
 # PHP Desktop
-Create GUI applications for Linux systems using php. [Ambitious but rubbish](#nb) ¯\\\_(ツ)_/¯
+Create GUI applications for Linux systems using php. [Ambitious but rubbish?](#nb) ¯\\\_(ツ)_/¯
 
 ![Demo](phpdsk.png)
 ## Installation
