@@ -16,7 +16,8 @@ Create GUI applications for Linux systems using php. [Ambitious but rubbish?](#n
 https://github.com/grephq/php-desktop/wiki
 
 ## N.B.
-Adding widgets crashes the application. Why? I don't know. https://github.com/grephq/php-desktop/issues/1
+- Library source code: https://github.com/grephq/php-desktop-library
+- Adding widgets crashes the application. Why? I don't know. https://github.com/grephq/php-desktop/issues/1
 
 ## TODO
 - Fix https://github.com/grephq/php-desktop/issues/1
