@@ -3,9 +3,12 @@ Create GUI applications for Linux systems using php. [Ambitious but rubbish?](#n
 
 ![Demo](phpdsk.png)
 ## Installation
-- Clone repository
+- Download repository using git or composer
   ```bash
   git clone https://github.com/grephq/php-desktop.git
+  ```
+  ```bash
+  composer require grephq/php-desktop
   ```
 - Enable extension loading in ```php.ini```
   ```ini
