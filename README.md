@@ -18,6 +18,7 @@ https://github.com/grephq/php-desktop/wiki
 ## N.B.
 - Library source code: https://github.com/grephq/php-desktop-library
 - Adding widgets crashes the application. Why? I don't know. https://github.com/grephq/php-desktop/issues/1
+- Windows support: https://github.com/grephq/php-desktop-library#windows-support
 
 ## TODO
 - Fix https://github.com/grephq/php-desktop/issues/1
